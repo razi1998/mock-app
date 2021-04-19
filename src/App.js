@@ -140,14 +140,6 @@ const App = () => {
   }
 
 
-  const newStudent = (student) => {
-    const students = state.students.filter(item => item.id !== student.id)
-    setState({
-      ...state,
-      students: [...students, student]
-    })
-  }
-
 
   return (
     <div>
@@ -161,7 +153,16 @@ const App = () => {
           <Route path="/student/:id" component={(props) =>
             <Student student={state.students.find(student => student.id === props.match.params.id)} />} />
 
-          <Route path="/addnew" component={() => <NewStudent newStudent={newStudent} />} />
+          <Route path="/addnew" component={() => <NewStudent student={
+            {
+              id: "",
+              FirstName: "",
+              LastName: "",
+              age: "",
+              clas: "",
+              percent: ""
+
+            }} />} />
 
           <Route path="/" component={NotFound} />
 
