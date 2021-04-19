@@ -46,28 +46,28 @@ class NewStudent extends Component {
             <div className="form-container">
                 <form className="container" >
                     <div className="mb-3">
-                        <label htmlfor="id" className="form-label">Registration Id</label>
+                        <label htmlfor="id" className="form-label"><b>Registration Id</b></label>
                         <input type="text" className="form-control" name="id" placeholder="Enter your Registration ID" value={this?.state?.student?.id} onChange={this.handleChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlfor="FirstName" className="form-label">First Name</label>
+                        <label htmlfor="FirstName" className="form-label"><b>First Name</b></label>
                         <input type="text" className="form-control" name="FirstName" placeholder="Enter your First Name" value={this?.state?.student?.FirstName} onChange={this.handleChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlfor="LastName" className="form-label">Last Name</label>
+                        <label htmlfor="LastName" className="form-label"><b>Last Name</b></label>
                         <input type="text" className="form-control" name="LastName" placeholder="Enter your Last Name" value={this?.state?.student?.LastName} onChange={this.handleChange} />
                     </div>
                     <div className="mb-3">
 
-                        <label htmlfor="age" className="form-label">Age</label>
+                        <label htmlfor="age" className="form-label"><b>Age</b></label>
                         <input type="text" className="form-control" name="age" placeholder="Enter your Age" value={this?.state?.student?.age} onChange={this.handleChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlfor="class" className="form-label">Class</label>
+                        <label htmlfor="class" className="form-label"><b>Class</b></label>
                         <input type="text" className="form-control" name="clas" placeholder="Enter your Class" value={this?.state?.student?.clas} onChange={this.handleChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlfor="class" className="form-label">Percentage</label>
+                        <label htmlfor="class" className="form-label"><b>Percentage</b></label>
                         <input type="text" className="form-control" name="percent" placeholder="Enter your Percentage" value={this?.state?.student?.percent} onChange={this.handleChange} />
                     </div>
                     <div className="form-text-valid">{this.state.formError}</div>
