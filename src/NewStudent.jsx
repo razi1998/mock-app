@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class NewStudent extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.newStudent);
         this.state = {
             student: this.props.student,
             formError: ""
@@ -25,13 +24,14 @@ class NewStudent extends Component {
     }
 
     handleSubmit = () => {
+        console.log(this.state.student)
         const { id, FirstName, LastName, age, clas, percent} = this.state.student;
         if (id && FirstName && LastName && age && clas && percent) {
             this.setState({
                 ...this.state,
                 formError: ""
             })
-            this.props.newStudent(this.state.student)
+            this.props.student(this.state.student)
         } else {
             this.setState({
                 ...this.state,
@@ -43,7 +43,7 @@ class NewStudent extends Component {
 
     render() {
         return (
-            <div >
+            <div className="form-container">
                 <form className="container" >
                     <div className="mb-3">
                         <label htmlfor="id" className="form-label">Registration Id</label>
