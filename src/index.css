@@ -32,3 +32,15 @@ code {
 .form-container{
   margin-top: 3%;
 }
+
+.action {
+  border: 2px solid;
+  border-collapse: collapse;
+  margin-right: 10px;
+}
+
+.actions {
+  border: 2px solid;
+  border-collapse: collapse;
+  margin-left: 5px;
+}
