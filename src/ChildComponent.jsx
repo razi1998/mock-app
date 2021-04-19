@@ -5,7 +5,7 @@ const ChildComponent = (props) => {
     const { students } = props;
     return (
         <div className="container">
-            <table className="table  table-hover ">
+            <table className="table table-hover ">
                 <thead>
                     <tr>
                         <th scope="col">Registration Id</th>
@@ -19,8 +19,13 @@ const ChildComponent = (props) => {
                             <tr key={student.id}>
                                 <td>{student?.id}</td>
                                 <td>{student?.FirstName} {student?.LastName}</td>
-                                <td>
-                                    <Link to={`/student/${student?.id}`}>View Details</Link>
+                                <td >
+                                    <Link to={`/student/${student?.id}`}>
+                                        <button className="action">View Details</button>
+                                    </Link>
+                                    <Link to={`/edit/${student.id}`}>
+                                        <button className="actions">Edit</button>
+                                    </Link>
                                 </td>
                             </tr>)
                     }
