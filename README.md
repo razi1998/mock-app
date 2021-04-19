@@ -1,6 +1,6 @@
 # mock-app
 This project I made to test my skills for the ReactJs and I have created a Nav bar on the nav bar there are 3 navlinks for home page, students list and add new students.
-If you find something new to add please approach me ont he given email below.
+If you find something new to add please approach me on the given email below.
 
 So, the app is named as mock app as you have seen it.
 
