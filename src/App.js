@@ -138,7 +138,16 @@ const App = () => {
       selectedStudent: id
     })
   }
-
+  const add = (student) => {
+    const s = state.students.filter(s => s.id !== student.id);
+    setState({
+      ...state,
+      students: [
+        ...s,
+        student
+      ]
+    })
+  }
 
 
   return (
@@ -163,6 +172,14 @@ const App = () => {
               percent: ""
 
             }} />} />
+          <Route exact path="/edit/:id" component={(props) => <NewStudent add={add} student={state.students.find(student => student.id == props.match.params.id)} />} />
+          <Route exact path="/edit" component={() => <NewStudent add={add} student={
+            {
+              id: "",
+              name: "",
+              age: ""
+            }
+          } />} />
 
           <Route path="/" component={NotFound} />
 
