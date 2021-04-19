@@ -13,7 +13,9 @@ to run this project u need to create a react app and node.js must be install to 
  make a separate folder
  open command prompt through that folder on writing cmd in the address bar
  then,
+ 
   commands:
+  
   npx create-react-app filename
   
   npm i react-router-dom --verbose(for react router dom package) 
